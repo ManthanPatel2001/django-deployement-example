@@ -1,0 +1,7 @@
+<!DOCTYPE html>
+{% extends "fourApp/base.html" %}
+
+    {% block body_blocks %}
+    <h1>This is Four App page</h1>
+    <a href="{% url 'fourApp:other' %}">Go To Other Page</a>
+    {% endblock %}

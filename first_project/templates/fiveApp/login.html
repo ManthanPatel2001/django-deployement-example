@@ -1,0 +1,14 @@
+{% extends 'fiveApp/base.html' %}
+{% block body_block %}
+<div class="jumbotron">
+    <h1>Please Login!</h1>
+    <form action="{% url 'fiveApp:user_login' %}" method="post">
+        {% csrf_token %}
+        <label for="userName">Username:</label>
+        <input type="text" name="username" id="userName">
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password">
+        <input type="submit" value="Login">
+    </form>
+</div>
+{% endblock %}
